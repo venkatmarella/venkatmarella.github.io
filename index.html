@@ -1,117 +1,1264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝔸𝕓𝕠𝕦𝕥 𝕄𝕖 - 𝕍𝕖𝕟𝕜𝕒𝕥 𝕄𝕒𝕣𝕖𝕝𝕝𝕒</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        .showcase {
-            min-height: 400px;
-            background: url('/dark.jpg') no-repeat center center/cover;
-            text-align: center;
-            color: #fff;
-        }
-        .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-        .showcase p {
-            font-size: 20px;
-        }
-        .main-content {
-            padding: 20px;
-            background: #fff;
-        }
-        .main-content h2 {
-            text-align: center;
-        }
-        .main-content p {
-            line-height: 1.6;
-        }
-        footer {
-            padding: 20px;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #333;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Venkat Marella - Principal DevOps Engineer and Kubernetes Platform Architect specializing in cloud platforms, SRE, automation, and enterprise Kubernetes.">
+  <meta property="og:title" content="Venkat Marella - Principal DevOps Engineer">
+  <meta property="og:description" content="15+ years in DevOps, SRE, cloud platforms, Kubernetes, Infrastructure as Code, and enterprise reliability engineering.">
+  <meta property="og:image" content="IMG_9306.JPG">
+  <title>Venkat Marella | Principal DevOps Engineer</title>
+  <script>document.documentElement.classList.add("js-enabled");</script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7f7f2;
+      --muted: #b9c0c9;
+      --panel: rgba(13, 18, 26, 0.78);
+      --panel-strong: rgba(18, 24, 34, 0.92);
+      --line: rgba(255, 255, 255, 0.15);
+      --cyan: #28d8ee;
+      --green: #53dc8c;
+      --gold: #ffbd57;
+      --coral: #ff715b;
+      --violet: #8d7bff;
+      --dark: #080b10;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        #080b10;
+      background-size: 64px 64px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background:
+        linear-gradient(120deg, rgba(40, 216, 238, 0.12), transparent 24%),
+        linear-gradient(240deg, rgba(255, 189, 87, 0.11), transparent 28%),
+        linear-gradient(0deg, rgba(83, 220, 140, 0.08), transparent 35%);
+      pointer-events: none;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(8, 11, 16, 0.74);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      color: #061017;
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+      box-shadow: 0 10px 24px rgba(40, 216, 238, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: color 180ms ease, background 180ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.08);
+      outline: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 124px 0 72px;
+      isolation: isolate;
+      overflow: hidden;
+      display: grid;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background:
+        linear-gradient(90deg, rgba(8, 11, 16, 0.94), rgba(8, 11, 16, 0.64) 46%, rgba(8, 11, 16, 0.34)),
+        url("dark.jpg") center / cover no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 220px;
+      z-index: -2;
+      background: linear-gradient(0deg, #080b10 8%, transparent);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: clamp(36px, 6vw, 78px);
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(40, 216, 238, 0.35);
+      border-radius: 6px;
+      background: rgba(40, 216, 238, 0.08);
+      color: #bcf7ff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 8px rgba(83, 220, 140, 0.14);
+    }
+
+    h1 {
+      margin: 22px 0 14px;
+      max-width: 780px;
+      font-size: clamp(3rem, 8vw, 7.2rem);
+      line-height: 0.86;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .hero-title span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(120deg, var(--ink), #d7fbff 42%, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: #d4d9df;
+      font-size: clamp(1.02rem, 2vw, 1.24rem);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 6px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .button.primary {
+      color: #061017;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.35);
+      outline: none;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 560px;
+      perspective: 1400px;
+    }
+
+    .portrait-frame {
+      position: absolute;
+      inset: 24px 0 auto auto;
+      width: min(430px, 92%);
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
+      box-shadow: var(--shadow);
+      transform: rotateY(-8deg) rotateX(3deg);
+    }
+
+    .portrait-frame::before {
+      content: "";
+      position: absolute;
+      inset: -16px;
+      z-index: -1;
+      border: 1px solid rgba(40, 216, 238, 0.26);
+      border-radius: 8px;
+      transform: translate(20px, 22px);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      filter: saturate(1.08) contrast(1.04);
+    }
+
+    .matrix-panel {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: min(370px, 84%);
+      min-height: 248px;
+      padding: 18px;
+      border: 1px solid rgba(83, 220, 140, 0.34);
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(8, 11, 16, 0.76), rgba(8, 11, 16, 0.88)),
+        url("matrix-hd.gif") center / cover;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .matrix-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04) 1px, transparent 1px, transparent 7px);
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .terminal-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      color: #caffdf;
+      font: 700 0.78rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-transform: uppercase;
+    }
+
+    .signal-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .signal-list li {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: #e9fff0;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .signal-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      margin-top: 6px;
+      border-radius: 2px;
+      background: var(--green);
+      box-shadow: 0 0 16px rgba(83, 220, 140, 0.78);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .stat {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 86px 0;
+      scroll-margin-top: 84px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .section-copy {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .expertise-card {
+      min-height: 168px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(40, 216, 238, 0.45);
+    }
+
+    .card-index {
+      display: inline-grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      color: #061017;
+      background: var(--gold);
+      font-weight: 900;
+    }
+
+    .expertise-card:nth-child(2n) .card-index {
+      background: var(--cyan);
+    }
+
+    .expertise-card:nth-child(3n) .card-index {
+      background: var(--green);
+    }
+
+    .expertise-card:nth-child(4n) .card-index {
+      background: var(--coral);
+    }
+
+    .expertise-card h3,
+    .role h3,
+    .skill-card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+
+    .expertise-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.94rem;
+    }
+
+    .architecture {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: stretch;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(40, 216, 238, 0.09), transparent 36%),
+        linear-gradient(315deg, rgba(255, 189, 87, 0.08), transparent 42%),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .architecture-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      min-height: 420px;
+      padding: 12px;
+    }
+
+    .architecture-copy p {
+      margin: 0;
+      color: #d6dce4;
+      line-height: 1.7;
+      font-size: 1.04rem;
+    }
+
+    .architecture-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 11px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 6px;
+      color: #dbe6ee;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .platform-diagram {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+      min-height: 420px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        rgba(7, 10, 15, 0.7);
+      background-size: 38px 38px;
+    }
+
+    .diagram-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .diagram-node {
+      position: relative;
+      min-height: 82px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.075);
+      overflow: hidden;
+    }
+
+    .diagram-node::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent, var(--cyan));
+    }
+
+    .diagram-node strong {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .diagram-node span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 14px;
+      width: 2px;
+      background: linear-gradient(var(--cyan), var(--gold), var(--green), var(--coral));
+    }
+
+    .role {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(160px, 0.28fr) minmax(0, 1fr);
+      gap: 24px;
+      padding: 24px 24px 24px 52px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background: var(--panel-strong);
+      box-shadow: 0 16px 46px rgba(0, 0, 0, 0.22);
+    }
+
+    .role::before {
+      content: "";
+      position: absolute;
+      top: 29px;
+      left: 7px;
+      width: 16px;
+      height: 16px;
+      border: 3px solid #080b10;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 28px rgba(40, 216, 238, 0.62);
+    }
+
+    .role:nth-child(2)::before {
+      background: var(--gold);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 28px rgba(255, 189, 87, 0.55);
+    }
+
+    .role:nth-child(3)::before {
+      background: var(--green);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 28px rgba(83, 220, 140, 0.55);
+    }
+
+    .role:nth-child(4)::before {
+      background: var(--coral);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 28px rgba(255, 113, 91, 0.5);
+    }
+
+    .period {
+      color: var(--gold);
+      font-weight: 900;
+      line-height: 1.3;
+    }
+
+    .company {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .role p {
+      margin: 8px 0 0;
+      color: #d7dde5;
+      line-height: 1.65;
+    }
+
+    .role ul {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .role li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .role li::before {
+      content: "";
+      position: absolute;
+      top: 0.72em;
+      left: 0;
+      width: 9px;
+      height: 2px;
+      background: var(--cyan);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-card {
+      min-height: 170px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .skill-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact-band {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background:
+        linear-gradient(120deg, rgba(40, 216, 238, 0.16), rgba(83, 220, 140, 0.1), rgba(255, 189, 87, 0.14)),
+        var(--panel-strong);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-band::before {
+      content: "SRE K8S IaC CI/CD CLOUD";
+      position: absolute;
+      inset: auto -20px -34px auto;
+      color: rgba(255, 255, 255, 0.055);
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .contact-content p {
+      max-width: 720px;
+      margin: 12px 0 0;
+      color: #d8e1e7;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 36px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--muted);
+      background: #07090d;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.9rem;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .js-enabled .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .js-enabled .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 960px) {
+      .nav {
+        min-height: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 104px;
+      }
+
+      .hero-grid,
+      .architecture,
+      .contact-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 600px;
+      }
+
+      .portrait-frame {
+        inset: 0 0 auto auto;
+        width: min(440px, 100%);
+      }
+
+      .matrix-panel {
+        bottom: 0;
+      }
+
+      .expertise-grid,
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-copy {
+        margin-top: 16px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .hero {
+        padding-bottom: 50px;
+      }
+
+      .hero-card {
+        min-height: auto;
+        display: grid;
+        gap: 16px;
+      }
+
+      .portrait-frame,
+      .matrix-panel {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        transform: none;
+      }
+
+      .portrait-frame::before {
+        display: none;
+      }
+
+      .hero-stats,
+      .expertise-grid,
+      .skills-grid,
+      .diagram-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .architecture,
+      .contact-band {
+        padding: 18px;
+      }
+
+      .architecture-copy,
+      .platform-diagram {
+        min-height: auto;
+      }
+
+      .role {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 22px 18px 22px 44px;
+      }
+
+      .footer-row {
+        display: grid;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .js-enabled .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section class="showcase">
-        <div class="container">
-            <h1>𝕍𝕖𝕟𝕜𝕒𝕥 𝕄𝕒𝕣𝕖𝕝𝕝𝕒</h1>
-            <p>𝔻𝕖𝕧𝕊𝕖𝕔𝕆𝕡𝕤 | 𝔸𝕀𝕆𝕡𝕤 𝔸𝕕𝕧𝕠𝕔𝕒𝕥𝕖 | 𝕋𝕖𝕔𝕙𝕟𝕠𝕝𝕠𝕘𝕪 𝔼𝕟𝕥𝕙𝕦𝕤𝕚𝕒𝕤𝕥 | ℙ𝕣𝕠𝕓𝕝𝕖𝕞 𝕊𝕠𝕝𝕧𝕖𝕣</p>
+  <header class="topbar">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Venkat Marella home">
+        <span class="brand-mark">VM</span>
+        <span>Venkat Marella</span>
+      </a>
+      <div class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#platform">Platform</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span>Principal DevOps Engineer</div>
+        <h1 class="hero-title">Venkat <span>Marella</span></h1>
+        <p class="lead">
+          Kubernetes Platform Architect and SRE leader with 15+ years of experience building secure,
+          highly available cloud platforms across AWS, Azure, IBM Cloud, and OpenShift environments.
+        </p>
+        <div class="hero-actions" aria-label="Profile actions">
+          <a class="button primary" href="venkat-resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="button" href="https://www.linkedin.com/in/venkatmarella" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button" href="https://github.com/venkatmarella" target="_blank" rel="noopener">GitHub</a>
         </div>
-    </section>
-    <section class="main-content container">
-        <h2>𝕎𝕙𝕠 𝔸𝕞 𝕀?</h2>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/venkatmarella" target="_blank">𝕄𝕪 𝕃𝕚𝕟𝕜𝕖𝕕𝕚𝕟 ℙ𝕣𝕠𝕗𝕚𝕝𝕖</a>
-            <a href="https://github.com/venkatmarella" target="_blank">𝕄𝕪 𝔾𝕚𝕥ℍ𝕦𝕓 ℂ𝕠𝕟𝕥𝕣𝕚𝕓𝕦𝕥𝕚𝕠𝕟𝕤</a>
+        <div class="hero-stats" aria-label="Career highlights">
+          <div class="stat">
+            <strong>15+</strong>
+            <span>years across DevOps, SRE, middleware, and platform engineering</span>
+          </div>
+          <div class="stat">
+            <strong>8+</strong>
+            <span>years building enterprise Kubernetes and container platforms</span>
+          </div>
+          <div class="stat">
+            <strong>4</strong>
+            <span>cloud and platform ecosystems: AWS, Azure, IBM Cloud, OpenShift</span>
+          </div>
         </div>
-        <p>ℍ𝕖𝕝𝕝𝕠! 𝕀'𝕞 𝕍𝕖𝕟𝕜𝕒𝕥 𝕄𝕒𝕣𝕖𝕝𝕝𝕒</p>
-        <p>𝔸 𝕤𝕖𝕒𝕤𝕠𝕟𝕖𝕕 𝕋𝕖𝕔𝕙 𝕃𝕖𝕒𝕕 𝕨𝕚𝕥𝕙 𝕖𝕩𝕥𝕖𝕟𝕤𝕚𝕧𝕖 𝕙𝕒𝕟𝕕𝕤-𝕠𝕟 𝕖𝕩𝕡𝕖𝕣𝕚𝕖𝕟𝕔𝕖 𝕚𝕟 𝔻𝕖𝕧𝕊𝕖𝕔𝕆𝕡𝕤 𝕒𝕟𝕕 𝕊𝕚𝕥𝕖 ℝ𝕖𝕝𝕚𝕒𝕓𝕚𝕝𝕚𝕥𝕪 𝔼𝕟𝕘𝕚𝕟𝕖𝕖𝕣𝕚𝕟𝕘, 𝕤𝕡𝕖𝕔𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕚𝕟 𝕓𝕠𝕥𝕙 𝕔𝕝𝕠𝕦𝕕 𝕒𝕟𝕕 𝕠𝕟-𝕡𝕣𝕖𝕞𝕚𝕤𝕖𝕤 𝕒𝕣𝕔𝕙𝕚𝕥𝕖𝕔𝕥𝕦𝕣𝕖 𝕒𝕟𝕕 𝕒𝕕𝕞𝕚𝕟𝕚𝕤𝕥𝕣𝕒𝕥𝕚𝕠𝕟. ℙ𝕣𝕠𝕗𝕚𝕔𝕚𝕖𝕟𝕥 𝕚𝕟 𝕔𝕠𝕟𝕥𝕒𝕚𝕟𝕖𝕣 𝕥𝕖𝕔𝕙𝕟𝕠𝕝𝕠𝕘𝕚𝕖𝕤, 𝕚𝕟𝕔𝕝𝕦𝕕𝕚𝕟𝕘 𝕂𝕦𝕓𝕖𝕣𝕟𝕖𝕥𝕖𝕤 (𝕓𝕠𝕥𝕙 𝕒𝕤 𝕒 𝕤𝕖𝕣𝕧𝕚𝕔𝕖 𝕒𝕟𝕕 𝕤𝕖𝕝𝕗-𝕙𝕠𝕤𝕥𝕖𝕕) 𝕒𝕟𝕕 𝕆𝕡𝕖𝕟𝕊𝕙𝕚𝕗𝕥 ℂ𝕠𝕟𝕥𝕒𝕚𝕟𝕖𝕣 ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞 (ℙ𝕒𝕒𝕊). 𝔸𝕟 𝕒𝕕𝕧𝕠𝕔𝕒𝕥𝕖 𝕗𝕠𝕣 𝔸𝕀𝕆𝕡𝕤 𝕨𝕚𝕥𝕙 𝔾𝕖𝕟𝔸𝕀 𝕚𝕟𝕥𝕖𝕘𝕣𝕒𝕥𝕚𝕠𝕟 𝕨𝕚𝕥𝕙𝕚𝕟 𝔻𝕖𝕧𝕊𝕖𝕔𝕆𝕡𝕤 𝕗𝕣𝕒𝕞𝕖𝕨𝕠𝕣𝕜𝕤.</p>
+      </div>
 
-        <p>𝔼𝕩𝕡𝕖𝕣𝕥𝕚𝕤𝕖 𝕚𝕟𝕔𝕝𝕦𝕕𝕖𝕤:</p>
+      <div class="hero-card" aria-label="Professional portrait and platform signals">
+        <figure class="portrait-frame">
+          <img src="IMG_9306.JPG" alt="Portrait of Venkat Marella" width="640" height="640">
+        </figure>
+        <div class="matrix-panel">
+          <div class="terminal-row">
+            <span>platform.signal</span>
+            <span>healthy</span>
+          </div>
+          <ul class="signal-list">
+            <li>Kubernetes lifecycle management, autoscaling, and reliability standards.</li>
+            <li>Terraform modular architecture and cloud-ready Infrastructure as Code.</li>
+            <li>Observability, incident response, CI/CD modernization, and SOC2 support.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <p>* ℂ𝕝𝕠𝕦𝕕/𝕆𝕟-𝕡𝕣𝕖𝕞𝕚𝕤𝕖𝕤 𝔻𝕖𝕧𝕆𝕡𝕤 𝕒𝕣𝕔𝕙𝕚𝕥𝕖𝕔𝕥𝕦𝕣𝕖 𝕒𝕟𝕕 𝕒𝕕𝕞𝕚𝕟𝕚𝕤𝕥𝕣𝕒𝕥𝕚𝕠𝕟.</p>
+  <main>
+    <section id="expertise" class="shell">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker">Core Expertise</p>
+          <h2>Cloud platforms engineered for uptime, speed, and security.</h2>
+        </div>
+        <p class="section-copy">
+          A senior hands-on engineering profile spanning Kubernetes architecture, DevOps strategy,
+          cloud networking, automation, and production reliability.
+        </p>
+      </div>
 
-        <p>* 𝕂𝕦𝕓𝕖𝕣𝕟𝕖𝕥𝕖𝕤 𝕒𝕟𝕕 𝔻𝕠𝕔𝕜𝕖𝕣 𝕊𝕨𝕒𝕣𝕞 𝕔𝕝𝕦𝕤𝕥𝕖𝕣 𝕞𝕒𝕟𝕒𝕘𝕖𝕞𝕖𝕟𝕥.</p>
-
-        <p>* 𝕀𝕟𝕤𝕥𝕒𝕝𝕝𝕚𝕟𝕘 𝕒𝕟𝕕 𝕔𝕠𝕟𝕗𝕚𝕘𝕦𝕣𝕚𝕟𝕘 ℝ𝕖𝕕𝕙𝕒𝕥 𝕆𝕡𝕖𝕟𝕊𝕙𝕚𝕗𝕥 𝕔𝕝𝕦𝕤𝕥𝕖𝕣𝕤 𝕦𝕤𝕚𝕟𝕘 𝔸𝕟𝕤𝕚𝕓𝕝𝕖 𝕡𝕝𝕒𝕪𝕓𝕠𝕠𝕜𝕤, 𝕞𝕒𝕟𝕒𝕘𝕚𝕟𝕘 𝕆𝕡𝕖𝕟𝕊𝕙𝕚𝕗𝕥 𝕡𝕝𝕒𝕥𝕗𝕠𝕣𝕞𝕤 𝕚𝕟 𝔸𝕎𝕊 𝕔𝕝𝕠𝕦𝕕 𝕒𝕟𝕕 𝕠𝕟-𝕡𝕣𝕖𝕞𝕚𝕤𝕖𝕤 𝕕𝕒𝕥𝕒 𝕔𝕖𝕟𝕥𝕖𝕣𝕤.</p>
-
-        <p>* 𝕎𝕣𝕚𝕥𝕚𝕟𝕘 𝔸𝕟𝕤𝕚𝕓𝕝𝕖 𝕡𝕝𝕒𝕪𝕓𝕠𝕠𝕜𝕤 𝕥𝕠 𝕒𝕦𝕥𝕠𝕞𝕒𝕥𝕖 𝕚𝕟𝕗𝕣𝕒𝕤𝕥𝕣𝕦𝕔𝕥𝕦𝕣𝕖 𝕕𝕖𝕡𝕝𝕠𝕪𝕞𝕖𝕟𝕥𝕤.𝕀𝕟𝕗𝕣𝕒𝕤𝕥𝕣𝕦𝕔𝕥𝕦𝕣𝕖 𝕕𝕖𝕤𝕚𝕘𝕟, 𝕠𝕡𝕖𝕣𝕒𝕥𝕚𝕠𝕟𝕒𝕝 𝕤𝕦𝕡𝕡𝕠𝕣𝕥, 𝕒𝕟𝕕 𝕕𝕖𝕧𝕖𝕝𝕠𝕡𝕞𝕖𝕟𝕥 𝕠𝕗 𝕤𝕔𝕒𝕝𝕒𝕓𝕝𝕖, 𝕙𝕚𝕘𝕙-𝕒𝕧𝕒𝕚𝕝𝕒𝕓𝕚𝕝𝕚𝕥𝕪, 𝕞𝕚𝕤𝕤𝕚𝕠𝕟-𝕔𝕣𝕚𝕥𝕚𝕔𝕒𝕝 𝕒𝕡𝕡𝕝𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤.</p>
-
-        <p>* 𝕊𝕥𝕣𝕠𝕟𝕘 𝕥𝕖𝕔𝕙𝕟𝕚𝕔𝕒𝕝 𝕤𝕜𝕚𝕝𝕝𝕤, 𝕕𝕖𝕔𝕚𝕤𝕚𝕠𝕟-𝕞𝕒𝕜𝕚𝕟𝕘, 𝕒𝕟𝕕 𝕡𝕣𝕠𝕓𝕝𝕖𝕞-𝕤𝕠𝕝𝕧𝕚𝕟𝕘 𝕒𝕓𝕚𝕝𝕚𝕥𝕚𝕖𝕤.</p>
-
+      <div class="expertise-grid">
+        <article class="expertise-card reveal">
+          <span class="card-index">01</span>
+          <h3>Kubernetes Platforms</h3>
+          <p>EKS, AKS, OpenShift, cluster lifecycle, autoscaling, upgrades, and operational best practices.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">02</span>
+          <h3>Infrastructure as Code</h3>
+          <p>Reusable Terraform patterns, Ansible automation, and cloud-provider abstraction principles.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">03</span>
+          <h3>CI/CD Modernization</h3>
+          <p>Pipeline optimization, GitHub workflows, Jenkins, Codeship, Helm migration, and release reliability.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">04</span>
+          <h3>Reliability Engineering</h3>
+          <p>Incident management, root cause analysis, observability standards, monitoring, and uptime improvement.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">05</span>
+          <h3>Cloud Security</h3>
+          <p>IAM models, least-privilege access, SSL/TLS, network policies, container security, and SOC2 support.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">06</span>
+          <h3>Team Leadership</h3>
+          <p>Mentorship, platform roadmap partnership, cross-functional execution, and DevOps operating standards.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">07</span>
+          <h3>Middleware Depth</h3>
+          <p>WebLogic, WebSphere, JBoss, JVM tuning, enterprise clustering, and production support foundations.</p>
+        </article>
+        <article class="expertise-card reveal">
+          <span class="card-index">08</span>
+          <h3>Automation</h3>
+          <p>Python and Bash automation for provisioning, deployments, operations, and repeatable delivery.</p>
+        </article>
+      </div>
     </section>
-    <footer>
-        <p>&copy; 𝟚𝟘𝟚𝟜 𝕍𝕖𝕟𝕜𝕒𝕥 𝕄𝕒𝕣𝕖𝕝𝕝𝕒</p>
-    </footer>
+
+    <section id="platform" class="shell">
+      <div class="architecture reveal">
+        <div class="architecture-copy">
+          <div>
+            <p class="kicker">Platform Architecture</p>
+            <h2>From cloud foundation to production-grade delivery.</h2>
+          </div>
+          <p>
+            Venkat designs platform systems that connect infrastructure, orchestration, delivery,
+            security, and observability into a durable engineering operating model.
+          </p>
+          <div class="architecture-tags" aria-label="Platform keywords">
+            <span class="tag">AWS</span>
+            <span class="tag">Azure</span>
+            <span class="tag">IBM Cloud</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">OpenShift</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">New Relic</span>
+            <span class="tag">Datadog</span>
+          </div>
+        </div>
+
+        <div class="platform-diagram" aria-label="Platform capability diagram">
+          <div class="diagram-row">
+            <div class="diagram-node" style="--accent: var(--cyan)">
+              <strong>Cloud Foundation</strong>
+              <span>Networking, IAM, storage, compute, security groups, and provider architecture.</span>
+            </div>
+            <div class="diagram-node" style="--accent: var(--green)">
+              <strong>Infrastructure as Code</strong>
+              <span>Terraform modules, Ansible automation, repeatable provisioning.</span>
+            </div>
+            <div class="diagram-node" style="--accent: var(--gold)">
+              <strong>Container Platform</strong>
+              <span>Kubernetes, AKS, EKS, OpenShift, Docker, Helm.</span>
+            </div>
+          </div>
+          <div class="diagram-row">
+            <div class="diagram-node" style="--accent: var(--coral)">
+              <strong>Delivery Systems</strong>
+              <span>CI/CD pipelines, release automation, GitHub, Jenkins, Codeship.</span>
+            </div>
+            <div class="diagram-node" style="--accent: var(--violet)">
+              <strong>Reliability Layer</strong>
+              <span>Autoscaling, rolling upgrades, incident response, uptime practices.</span>
+            </div>
+            <div class="diagram-node" style="--accent: var(--cyan)">
+              <strong>Observability</strong>
+              <span>New Relic, Datadog, Sematext, dashboards, standards, and feedback loops.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="shell">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker">Professional Experience</p>
+          <h2>Enterprise DevOps leadership with deep platform execution.</h2>
+        </div>
+        <p class="section-copy">
+          Recent roles emphasize Kubernetes, SRE, cloud-native delivery, security posture,
+          production reliability, and platform mentorship.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="role reveal">
+          <div>
+            <div class="period">Feb 2022 - Present</div>
+            <span class="company">BenchPrep</span>
+          </div>
+          <div>
+            <h3>Lead DevOps / SRE Engineer</h3>
+            <p>Architects and operates enterprise-grade Kubernetes platforms in Azure and AWS using cloud-agnostic best practices.</p>
+            <ul>
+              <li>Designed highly available multi-node Kubernetes clusters with autoscaling, rolling upgrades, and zero-downtime deployments.</li>
+              <li>Built reusable Terraform Infrastructure as Code patterns aligned with cloud-provider abstraction principles.</li>
+              <li>Led CI/CD modernization, observability standards, incident response, reliability improvements, and SOC2 implementation support.</li>
+              <li>Mentored DevOps engineers and partnered with engineering, security, and leadership on platform roadmap decisions.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role reveal">
+          <div>
+            <div class="period">Oct 2019 - Feb 2022</div>
+            <span class="company">BenchPrep</span>
+          </div>
+          <div>
+            <h3>Senior DevOps / SRE Engineer</h3>
+            <p>Designed Kubernetes-based microservices infrastructure using Infrastructure as Code and automation tooling.</p>
+            <ul>
+              <li>Migrated Helm v2 to Helm v3 without downtime and managed Kubernetes lifecycle upgrades and security patching.</li>
+              <li>Implemented cluster autoscaling with HPA and node autoscaler patterns.</li>
+              <li>Automated environment provisioning with Terraform and Ansible.</li>
+              <li>Integrated CI/CD workflows using GitHub and supporting automation tooling.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role reveal">
+          <div>
+            <div class="period">Jul 2017 - Oct 2019</div>
+            <span class="company">Novisys LLC - Client: United Airlines</span>
+          </div>
+          <div>
+            <h3>Senior DevOps / Middleware Engineer</h3>
+            <p>Designed and implemented OpenShift container platforms across AWS and on-prem environments.</p>
+            <ul>
+              <li>Automated infrastructure provisioning with Terraform and Ansible.</li>
+              <li>Built CI/CD pipelines integrating Jenkins and release automation tools.</li>
+              <li>Containerized legacy enterprise applications and managed AWS networking, IAM roles, security groups, and storage architecture.</li>
+              <li>Evaluated ECS, EKS, and Kubernetes architectures for enterprise adoption.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role reveal">
+          <div>
+            <div class="period">2010 - 2017</div>
+            <span class="company">Earlier Experience</span>
+          </div>
+          <div>
+            <h3>Senior Middleware Engineer / Ecommerce Middleware Engineer</h3>
+            <p>Built the production middleware foundation behind later platform engineering work.</p>
+            <ul>
+              <li>Administered and tuned enterprise WebLogic, WebSphere, and JBoss environments.</li>
+              <li>Automated deployments and performed JVM performance tuning.</li>
+              <li>Supported production clustering and high-availability architectures.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="shell">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker">Technical Skills</p>
+          <h2>Tooling across cloud, containers, delivery, and operations.</h2>
+        </div>
+        <p class="section-copy">
+          Practical experience spans platform buildout, secure operations, monitoring,
+          automation, and production support for enterprise systems.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <h3>Cloud Platforms</h3>
+          <p>AWS EC2, S3, DynamoDB, IAM, RDS, IBM Cloud Kubernetes Service, Microsoft Azure, and AKS-ready architecture.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Container & Orchestration</h3>
+          <p>Kubernetes, EKS, AKS, OpenShift 3.x, Docker, Helm, cluster autoscaling, and container security.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Infrastructure as Code</h3>
+          <p>Terraform modular architecture, Ansible automation, reusable provisioning, and environment standardization.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>CI/CD</h3>
+          <p>GitHub, Codeship, Jenkins, Helm release workflows, deployment optimization, and release automation.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Monitoring & Observability</h3>
+          <p>New Relic, Datadog, Sematext, monitoring standards, incident response, and reliability feedback loops.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Security & Scripting</h3>
+          <p>IAM, SSL/TLS, Threat Stack, network policies, Python, Bash, and operations automation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="shell">
+      <div class="contact-band reveal">
+        <div class="contact-content">
+          <div>
+            <p class="kicker">Connect</p>
+            <h2>Cloud platform leadership for teams that need reliable delivery.</h2>
+            <p>
+              Based in Elgin, Illinois. Explore the full resume, GitHub contributions,
+              or connect through LinkedIn for platform engineering, DevOps, and SRE leadership.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="venkat-resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+            <a class="button" href="https://www.linkedin.com/in/venkatmarella" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <span>&copy; <span id="year">2026</span> Venkat Marella</span>
+      <span>Principal DevOps Engineer | Kubernetes Platform Architect</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      reveals.forEach((item) => observer.observe(item));
+    } else {
+      reveals.forEach((item) => item.classList.add("visible"));
+    }
+  </script>
 </body>
 </html>
