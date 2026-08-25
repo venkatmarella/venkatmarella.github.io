@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Venkat Marella - Lead DevOps Engineer and Kubernetes Platform Architect specializing in AI-assisted DevOps, SRE, cloud platforms, automation, and enterprise Kubernetes.">
-  <meta property="og:title" content="Venkat Marella - Lead DevOps Engineer">
-  <meta property="og:description" content="15+ years in DevOps, SRE, AI-assisted operations, Kubernetes, Infrastructure as Code, and enterprise reliability engineering.">
+  <meta name="description" content="Venkat Marella - Accomplished Tech Lead &amp; DevSecOps Architect with 16 years of IT experience and 9+ years in cloud infrastructure, SRE, Kubernetes platforms, MLOps, LLMOps, AIOps, and AI Agentic Operations.">
+  <meta property="og:title" content="Venkat Marella - Tech Lead &amp; DevSecOps Architect">
+  <meta property="og:description" content="16 years of IT experience with 9+ years in cloud infrastructure, SRE, Kubernetes platforms, MLOps, LLMOps, AIOps, and AI Agentic Operations.">
   <meta property="og:image" content="IMG_9306.JPG">
-  <title>Venkat Marella | Lead DevOps Engineer</title>
+  <title>Venkat Marella | Tech Lead &amp; DevSecOps Architect</title>
   <script>document.documentElement.classList.add("js-enabled");</script>
   <style>
     :root {
@@ -704,12 +704,22 @@
       gap: 14px;
     }
 
+    .skills-grid .skill-card:last-child:nth-child(3n + 1) {
+      grid-column: 1 / -1;
+    }
+
     .skill-card {
       min-height: 170px;
       padding: 22px;
       border: 1px solid rgba(255, 255, 255, 0.13);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.06);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(40, 216, 238, 0.4);
     }
 
     .skill-card p {
@@ -731,7 +741,7 @@
     }
 
     .contact-band::before {
-      content: "SRE K8S IaC CI/CD CLOUD";
+      content: "AI MLOPS K8S SRE IaC CLOUD";
       position: absolute;
       inset: auto -20px -34px auto;
       color: rgba(255, 255, 255, 0.055);
@@ -826,6 +836,14 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .skills-grid .skill-card:last-child:nth-child(3n + 1) {
+        grid-column: auto;
+      }
+
+      .skills-grid .skill-card:last-child:nth-child(2n + 1) {
+        grid-column: 1 / -1;
+      }
+
       .section-heading {
         display: block;
       }
@@ -867,6 +885,11 @@
       .skills-grid,
       .diagram-row {
         grid-template-columns: 1fr;
+      }
+
+      .skills-grid .skill-card:last-child:nth-child(2n + 1),
+      .skills-grid .skill-card:last-child:nth-child(3n + 1) {
+        grid-column: auto;
       }
 
       section {
@@ -931,12 +954,13 @@
   <section class="hero" id="top">
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span>Lead DevOps Engineer</div>
+        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span>Tech Lead &amp; DevSecOps Architect</div>
         <h1 class="hero-title">Venkat <span>Marella</span></h1>
         <p class="lead">
-          Kubernetes Platform Architect and SRE leader with 15+ years of experience building secure,
-          highly available cloud and on-prem platforms across AWS, IBM Cloud, OpenShift, Docker,
-          and enterprise middleware environments, now accelerated with AI-assisted DevOps workflows.
+          Accomplished Tech Lead &amp; DevSecOps Architect with 16 years of IT experience and 9+ years of enterprise experience in cloud infrastructure, site reliability engineering, and high-availability application delivery, currently advancing expertise across the complete MLOps, LLMOps, AIOps, and AI Agentic Operations lifecycle. Proven background in architecting, deploying, and managing production-grade Kubernetes platforms across Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, and Red Hat OpenShift.
+        </p>
+        <p class="lead" style="margin-top: 14px; font-size: 1.04rem;">
+          I focus on bridging enterprise platform engineering with cutting-edge AI systems, leveraging strong foundations in Linux automation, Python, Docker, Infrastructure as Code, and CI/CD pipelines to build scalable, self-healing, and resilient cloud-native AI platforms.
         </p>
         <div class="hero-actions" aria-label="Profile actions">
           <a class="button primary" href="venkat-resume.pdf" target="_blank" rel="noopener">Download Resume</a>
@@ -945,16 +969,16 @@
         </div>
         <div class="hero-stats" aria-label="Career highlights">
           <div class="stat">
-            <strong>15+</strong>
-            <span>years across DevOps, SRE, middleware, and platform engineering</span>
+            <strong>16</strong>
+            <span>years of IT experience across DevSecOps, SRE, and platform architecture</span>
           </div>
           <div class="stat">
-            <strong>8+</strong>
-            <span>years building enterprise Kubernetes, OpenShift, and Docker platforms</span>
+            <strong>9+</strong>
+            <span>years architecting enterprise Kubernetes across GKE, EKS, AKS &amp; OpenShift</span>
           </div>
           <div class="stat">
-            <strong>AI</strong>
-            <span>Claude, OpenAI Codex, MCP, and AI agents applied to daily SRE workflows</span>
+            <strong>AI Ops</strong>
+            <span>complete lifecycle across MLOps, LLMOps, AIOps, MCP &amp; AI Agentic Systems</span>
           </div>
         </div>
       </div>
@@ -966,12 +990,12 @@
         <div class="matrix-panel">
           <div class="terminal-row">
             <span>platform.signal</span>
-            <span>healthy</span>
+            <span>active</span>
           </div>
           <ul class="signal-list">
-            <li>AI-assisted troubleshooting across Kubernetes events, logs, metrics, ingress, and telemetry.</li>
-            <li>MCP workflows connecting Kubernetes, Terraform, New Relic, GitHub, and cloud platforms.</li>
-            <li>Terraform, Python, Bash, Argo CD, and runbooks for repeatable platform operations.</li>
+            <li>Production Kubernetes across GKE, Amazon EKS, Azure AKS, and Red Hat OpenShift.</li>
+            <li>MLOps &amp; LLMOps pipelines: Kubeflow, Vertex AI, MLflow, LoRA fine-tuning, RAG, and Vector DBs.</li>
+            <li>AI Agentic Ops &amp; MCP workflows: LangChain, CrewAI, tool calling, and self-healing systems.</li>
           </ul>
         </div>
       </div>
@@ -983,54 +1007,54 @@
       <div class="section-heading reveal">
         <div>
           <p class="kicker">Core Expertise</p>
-          <h2>Cloud platforms engineered with automation, AI, uptime, and security in mind.</h2>
+          <h2>Enterprise platform engineering meets cutting-edge AI systems.</h2>
         </div>
         <p class="section-copy">
-          A senior hands-on engineering profile spanning Kubernetes architecture, AI-assisted DevOps,
-          cloud networking, automation, middleware, and production reliability.
+          A proven architectural background spanning multi-cloud Kubernetes, MLOps, LLMOps, AIOps,
+          AI Agentic operations, DevSecOps automation, and production site reliability.
         </p>
       </div>
 
       <div class="expertise-grid">
         <article class="expertise-card reveal">
           <span class="card-index">01</span>
-          <h3>Kubernetes Platforms</h3>
-          <p>AWS EKS, Azure Kubernetes Service, IBM Cloud Kubernetes, OpenShift, Docker, cluster lifecycle, autoscaling, and upgrades.</p>
+          <h3>Multi-Cloud Kubernetes</h3>
+          <p>Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, Red Hat OpenShift, Helm, autoscaling, and cluster lifecycle.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">02</span>
-          <h3>AI-Assisted DevOps</h3>
-          <p>Claude, OpenAI Codex, MCP servers, and AI agents for SRE, Terraform, Kubernetes, troubleshooting, and runbooks.</p>
+          <h3>AI Agentic Operations</h3>
+          <p>Multi-agent systems, LangChain, LlamaIndex, CrewAI, MCP server/client integrations, tool calling, and autonomous reasoning.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">03</span>
-          <h3>Infrastructure as Code</h3>
-          <p>Terraform, Ansible playbooks, AWS infrastructure automation, reusable modules, and environment provisioning.</p>
+          <h3>MLOps Engineering</h3>
+          <p>Data &amp; feature stores (Feast), experiment tracking (MLflow, W&amp;B), DVC, ONNX, FastAPI deployment, and Kubeflow/Vertex AI.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">04</span>
-          <h3>CI/CD and GitOps</h3>
-          <p>Argo CD, GitHub, Octopus Codefresh, Jenkins, Codeship, TFS, TeamCity, Helm, and release reliability.</p>
+          <h3>LLMOps &amp; RAG Systems</h3>
+          <p>Prompt engineering, LoRA/QLoRA fine-tuning, vector databases (ChromaDB, Pinecone, Weaviate), RAG architecture, and guardrails.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">05</span>
-          <h3>Reliability Engineering</h3>
-          <p>Incident response, root cause analysis, New Relic, Datadog, Sematext, logs, metrics, and telemetry.</p>
+          <h3>AIOps &amp; Self-Healing</h3>
+          <p>Telemetry &amp; APM integration, statistical &amp; ML anomaly detection, predictive analytics, auto-remediation, and chaos engineering.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">06</span>
-          <h3>Cloud Security</h3>
-          <p>IAM, SSL/TLS, Threat Stack, Lace Work FortiCNAPP, network policies, security groups, bastion access, and platform hardening.</p>
+          <h3>DevSecOps &amp; CI/CD</h3>
+          <p>Linux scripting, Python automation, Git, Docker containerization, Jenkins, GitHub Actions, and microservices security.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">07</span>
-          <h3>Middleware Depth</h3>
-          <p>WebLogic, WebSphere, JBoss, JVM tuning, enterprise clustering, and production support foundations.</p>
+          <h3>Infrastructure as Code</h3>
+          <p>Terraform, Ansible playbooks, AWS CloudFormation/IAM/EC2, GCP, Azure, and resilient multi-cloud architecture.</p>
         </article>
         <article class="expertise-card reveal">
           <span class="card-index">08</span>
-          <h3>Automation and Leadership</h3>
-          <p>Python, Bash, WLST, wsadmin, mentoring, vendor coordination, audits, and cross-functional platform delivery.</p>
+          <h3>Observability &amp; Systems</h3>
+          <p>Prometheus, Grafana, ELK/EFK stack, distributed tracing, J2EE migrations (WebLogic, JBoss, WebSphere), and SRE delivery.</p>
         </article>
       </div>
     </section>
@@ -1040,53 +1064,59 @@
         <div class="architecture-copy">
           <div>
             <p class="kicker">Platform Architecture</p>
-            <h2>From AI-assisted operations to production-grade delivery.</h2>
+            <h2>Bridging enterprise platform engineering with cutting-edge AI systems.</h2>
           </div>
           <p>
-            Venkat designs platform systems that connect AI agents, infrastructure, orchestration,
-            delivery, security, and observability into a durable engineering operating model.
+            Venkat architects resilient platforms that unify multi-cloud Kubernetes, autonomous AI agentic workflows,
+            MLOps/LLMOps pipelines, self-healing AIOps, and DevSecOps into a production-grade operating model.
           </p>
           <div class="architecture-tags" aria-label="Platform keywords">
-            <span class="tag">AWS</span>
-            <span class="tag">IBM Cloud</span>
-            <span class="tag">Kubernetes</span>
+            <span class="tag">GKE</span>
+            <span class="tag">Amazon EKS</span>
+            <span class="tag">Azure AKS</span>
             <span class="tag">OpenShift</span>
-            <span class="tag">Docker DDC</span>
             <span class="tag">Terraform</span>
             <span class="tag">Ansible</span>
-            <span class="tag">Argo CD</span>
-            <span class="tag">New Relic</span>
+            <span class="tag">MLOps</span>
+            <span class="tag">LLMOps</span>
+            <span class="tag">AIOps</span>
+            <span class="tag">AI Agentic Ops</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">CrewAI</span>
             <span class="tag">MCP</span>
+            <span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">DevSecOps</span>
           </div>
         </div>
 
         <div class="platform-diagram" aria-label="Platform capability diagram">
           <div class="diagram-row">
             <div class="diagram-node" style="--accent: var(--cyan)">
-              <strong>Cloud Foundation</strong>
-              <span>AWS, IBM Cloud, networking, IAM, storage, virtual machines, bare metal, and provider architecture.</span>
+              <strong>Multi-Cloud Infra</strong>
+              <span>Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, Red Hat OpenShift, Terraform, Ansible, AWS, GCP, Azure.</span>
             </div>
             <div class="diagram-node" style="--accent: var(--green)">
-              <strong>AI Operations</strong>
-              <span>Claude, Codex, MCP, AI agents, incident analysis, documentation, and operational runbooks.</span>
+              <strong>MLOps Pipelines</strong>
+              <span>Feast feature store, MLflow, Weights &amp; Biases, DVC, ONNX, FastAPI, Kubeflow, SageMaker, Vertex AI pipelines.</span>
             </div>
             <div class="diagram-node" style="--accent: var(--gold)">
-              <strong>Container Platform</strong>
-              <span>Kubernetes, IBM Cloud Kubernetes, OpenShift, Docker Enterprise, Docker Swarm, and Helm.</span>
+              <strong>LLMOps &amp; RAG</strong>
+              <span>Prompt engineering, LoRA/QLoRA fine-tuning, ChromaDB, Pinecone, Weaviate, RAG, MCP, quantization, guardrails.</span>
             </div>
           </div>
           <div class="diagram-row">
             <div class="diagram-node" style="--accent: var(--coral)">
-              <strong>Delivery Systems</strong>
-              <span>Argo CD, CI/CD pipelines, release automation, GitHub, Octopus Codefresh, Jenkins, Codeship, TFS, and TeamCity.</span>
+              <strong>AI Agentic Ops</strong>
+              <span>Multi-agent systems, LangChain, LlamaIndex, CrewAI, MCP server/client, tool calling, agent memory, CoT reasoning.</span>
             </div>
             <div class="diagram-node" style="--accent: var(--violet)">
-              <strong>Reliability Layer</strong>
-              <span>Autoscaling, rolling upgrades, platform migrations, disaster recovery, and incident response.</span>
+              <strong>AIOps &amp; Self-Healing</strong>
+              <span>Telemetry &amp; APM integration, ML anomaly detection, predictive analytics, auto-remediation, chaos engineering.</span>
             </div>
             <div class="diagram-node" style="--accent: var(--cyan)">
-              <strong>Observability</strong>
-              <span>New Relic, Datadog, Sematext, SiteScope, logs, metrics, dashboards, and feedback loops.</span>
+              <strong>DevSecOps &amp; Observability</strong>
+              <span>Linux &amp; Python automation, Docker, Jenkins, GitHub Actions, Prometheus, Grafana, ELK/EFK stack, distributed tracing.</span>
             </div>
           </div>
         </div>
@@ -1097,10 +1127,10 @@
       <div class="section-heading reveal">
         <div>
           <p class="kicker">Professional Experience</p>
-          <h2>Enterprise DevOps leadership with AI-assisted platform execution.</h2>
+          <h2>Enterprise DevSecOps leadership with cloud-native AI platform execution.</h2>
         </div>
         <p class="section-copy">
-          Recent roles emphasize AI-assisted DevOps, Kubernetes, SRE, cloud-native delivery,
+          Recent roles emphasize DevSecOps architecture, AI Agentic workflows, multi-cloud Kubernetes, SRE,
           production reliability, middleware depth, and platform mentorship.
         </p>
       </div>
@@ -1112,10 +1142,10 @@
             <span class="company">BenchPrep</span>
           </div>
           <div>
-            <h3>Lead DevOps / SRE Engineer</h3>
-            <p>Leads the DevOps/SRE team while remaining a hands-on engineer for day-to-day production operations, infrastructure architecture, Kubernetes, cloud platforms, and security initiatives.</p>
+            <h3>Tech Lead &amp; DevSecOps / SRE Architect</h3>
+            <p>Leads the platform and DevSecOps engineering team while remaining a hands-on architect for day-to-day production operations, infrastructure architecture, Kubernetes platforms, cloud systems, and security initiatives.</p>
             <ul>
-              <li>Spearheaded AI-assisted DevOps practices by integrating Claude, OpenAI Codex, MCP, and AI agents into SRE, Terraform, Python automation, and Kubernetes operations.</li>
+              <li>Spearheaded AI Agentic Ops and AI-assisted DevOps practices by integrating Claude, OpenAI Codex, MCP, and AI agents into SRE, Terraform, Python automation, and Kubernetes operations.</li>
               <li>Designed MCP-powered workflows connecting Kubernetes, Terraform, New Relic, GitHub, and cloud platforms for troubleshooting, infrastructure analysis, and operational tasks.</li>
               <li>Built Python, Terraform, and Bash automation for Kubernetes operations, incident response, platform migrations, infrastructure provisioning, and production troubleshooting.</li>
               <li>Implemented Argo CD-based continuous delivery and maintained CI/CD pipelines for application and infrastructure migrations.</li>
@@ -1182,39 +1212,43 @@
     <section id="skills" class="shell">
       <div class="section-heading reveal">
         <div>
-          <p class="kicker">Technical Skills</p>
-          <h2>Tooling across AI, cloud, containers, delivery, middleware, and operations.</h2>
+          <p class="kicker">Technical Stack &amp; Core Competencies</p>
+          <h2>Tooling across AI systems, multi-cloud Kubernetes, and DevSecOps.</h2>
         </div>
         <p class="section-copy">
-          Practical experience spans AI-assisted workflows, platform buildout, secure operations,
-          monitoring, automation, and production support for enterprise systems.
+          Deep hands-on proficiency across the complete MLOps, LLMOps, AIOps, AI Agentic operations,
+          cloud-native platforms, and enterprise reliability lifecycle.
         </p>
       </div>
 
       <div class="skills-grid">
         <article class="skill-card reveal">
-          <h3>Cloud Platforms</h3>
-          <p>AWS EC2, EFS, S3, IAM, Lambda, RDS, AWS CodeDeploy, IBM Cloud Kubernetes Service, on-prem platforms, and cloud architecture.</p>
+          <h3>Multi-Cloud Kubernetes &amp; Infra</h3>
+          <p>Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, Red Hat OpenShift, Helm, Terraform, Ansible Playbooks, AWS (EC2, CloudFormation, IAM), GCP, Azure, Multi-Cloud Architecture.</p>
         </article>
         <article class="skill-card reveal">
-          <h3>AI-Assisted Operations</h3>
-          <p>Claude, OpenAI Codex, MCP, Claude Skills, AI agents, AI-assisted RCA, documentation, infrastructure analysis, and runbooks.</p>
+          <h3>DevOps &amp; CI/CD Foundations</h3>
+          <p>Linux Shell Scripting, Python Automation, Git Version Control, Docker &amp; Containerization, Jenkins, GitHub Actions, Microservices Security.</p>
         </article>
         <article class="skill-card reveal">
-          <h3>Container & Orchestration</h3>
-          <p>Kubernetes, IBM Cloud Kubernetes, OpenShift 3.x, Docker DDC, UCP, DTR, Docker Swarm, Docker Compose, Helm, and autoscaling.</p>
+          <h3>MLOps Pipelines &amp; Engineering</h3>
+          <p>Data &amp; Feature Engineering (Feast), Experiment Tracking (MLflow, Weights &amp; Biases), Model Versioning (DVC), Model Deployment (ONNX, FastAPI, Batch Inference), Continuous Training, Model Monitoring &amp; Drift Detection, ML Orchestration (Kubeflow, SageMaker, Vertex AI pipelines).</p>
         </article>
         <article class="skill-card reveal">
-          <h3>Infrastructure and Delivery</h3>
-          <p>Terraform, Ansible, Argo CD, GitHub, Octopus Codefresh, Codeship, Jenkins, TFS, TeamCity, CA Release Automation, and Helm templates.</p>
+          <h3>LLMOps &amp; RAG Systems</h3>
+          <p>Prompt Engineering &amp; Versioning, LLM Fine-Tuning (LoRA, QLoRA), Vector Databases (ChromaDB, Pinecone, Weaviate), RAG Architecture, Model Context Protocol (MCP), Quantization, LLM Observability &amp; Guardrails.</p>
         </article>
         <article class="skill-card reveal">
-          <h3>Monitoring and Security</h3>
-          <p>New Relic, Datadog, Sematext, Threat Stack, Lace Work FortiCNAPP, AppDynamics, HP Diagnostics, F5 Big-IP, SSL certificates, and IAM.</p>
+          <h3>AIOps &amp; Self-Healing Infrastructure</h3>
+          <p>Telemetry &amp; APM Integration, Statistical &amp; ML-Based Anomaly Detection, Predictive Analytics &amp; Capacity Planning, Root Cause Analysis, Auto-Remediation &amp; Chaos Engineering, Kubernetes Microservices Observability.</p>
         </article>
         <article class="skill-card reveal">
-          <h3>Middleware and Scripting</h3>
-          <p>WebLogic, WebSphere, JBoss, Apache, Tomcat, Oracle RAC, Python, Bash, WLST, wsadmin, Jython, Perl, SQL, and PL/SQL.</p>
+          <h3>AI Agentic Ops &amp; Autonomous Systems</h3>
+          <p>Multi-Agent Systems, Agent Frameworks (LangChain, LlamaIndex, CrewAI), MCP Server/Client Integrations, Tool Use &amp; Function Calling, Agent Memory (Vector DBs/Knowledge Graphs), Chain-of-Thought Reasoning, Human-In-The-Loop Patterns.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Monitoring, Observability &amp; Systems</h3>
+          <p>Prometheus, Grafana, ELK/EFK Stack, Distributed Tracing, J2EE Application Server Migration (WebLogic, JBoss, WebSphere), DevSecOps Automation.</p>
         </article>
       </div>
     </section>
@@ -1224,10 +1258,10 @@
         <div class="contact-content">
           <div>
             <p class="kicker">Connect</p>
-            <h2>AI-assisted cloud platform leadership for teams that need reliable delivery.</h2>
+            <h2>Tech Lead &amp; DevSecOps leadership for cloud-native AI &amp; enterprise platforms.</h2>
             <p>
               Based in Elgin, Illinois. Explore the full resume, GitHub contributions,
-              or connect through LinkedIn for AI-assisted platform engineering, DevOps, and SRE leadership.
+              or connect through LinkedIn to discuss MLOps, LLMOps, AIOps, AI Agentic Ops, multi-cloud Kubernetes, and DevSecOps architecture.
             </p>
           </div>
           <div class="hero-actions">
@@ -1242,7 +1276,7 @@
   <footer>
     <div class="shell footer-row">
       <span>&copy; <span id="year">2026</span> Venkat Marella</span>
-      <span>AI-Assisted DevOps | SRE | Kubernetes Platform Architect</span>
+      <span>Tech Lead &amp; DevSecOps Architect | MLOps &amp; LLMOps | Multi-Cloud Kubernetes</span>
     </div>
   </footer>
 
